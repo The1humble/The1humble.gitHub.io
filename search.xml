@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>IO总结</title>
+      <link href="/2024/08/03/IO%E6%80%BB%E7%BB%93/"/>
+      <url>/2024/08/03/IO%E6%80%BB%E7%BB%93/</url>
+      
+        <content type="html"><![CDATA[<h1 id="文件IO与标准IO的区别"><a href="#文件IO与标准IO的区别" class="headerlink" title="文件IO与标准IO的区别"></a>文件IO与标准IO的区别</h1><table><thead><tr><th align="center"></th><th align="center">标准IO</th><th align="center">文件IO</th></tr></thead><tbody><tr><td align="center">概念</td><td align="center">c语言定义的标准输入输出</td><td align="center">posix定义的文件操作</td></tr><tr><td align="center">操作对象</td><td align="center">围绕文件流操作FILE*</td><td align="center">围绕文件描述符进行操作</td></tr><tr><td align="center">缓冲区</td><td align="center">有缓冲区</td><td align="center">无缓冲区</td></tr><tr><td align="center">默认开启</td><td align="center">开启三个流：stdin、stdout、stderr</td><td align="center">开启三个文件描述符：0（输入）、1（输出）、2（错误）</td></tr><tr><td align="center">操作类别</td><td align="center">只能操作普通文件</td><td align="center">可以操作除目录之外的所有文件</td></tr></tbody></table><h1 id="打开文件模式"><a href="#打开文件模式" class="headerlink" title="打开文件模式"></a>打开文件模式</h1><table><thead><tr><th align="center">文件IO模式</th><th align="center">标准IO模式</th></tr></thead><tbody><tr><td align="center">O_RDONLY</td><td align="center">“r”</td></tr><tr><td align="center">O_RDWR</td><td align="center">“r+”</td></tr><tr><td align="center">O_WEONLY &#124; O_CREATE &#124; O_TRUNC</td><td align="center">“w”</td></tr><tr><td align="center">O_RDWR &#124; O_TRUNC &#124; O_CREATE</td><td align="center">“w+”</td></tr><tr><td align="center">O_APPEND &#124; O_CREATE &#124; O_WEONLY</td><td align="center">“a”</td></tr><tr><td align="center">O_APPEND &#124; O_CREATE &#124; O_RDWR</td><td align="center">“a+”</td></tr></tbody></table><h1 id="目录操作"><a href="#目录操作" class="headerlink" title="目录操作"></a>目录操作</h1><blockquote><p>目录操作围绕目录流DIR*进行操作，目录流是由opendir()函数创建的，它可以用来遍历目录中的文件和子目录。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> IO进程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> IO </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>进程间通信</title>
       <link href="/2024/08/02/%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1/"/>
       <url>/2024/08/02/%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1/</url>
